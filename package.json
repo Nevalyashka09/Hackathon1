@@ -1,6 +1,7 @@
 {
   "name": "frontend",
   "private": true,
+  "homepage": "https://nevalyashka09.github.io/firsthackathon/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -8,7 +9,9 @@
     "build": "vite build",
     "lint": "echo '----- Checking Frontend...' && prettier --debug-check . && eslint --ext .jsx . && echo '----- Done!'",
     "preview": "vite preview",
-    "fix": "prettier --write . && eslint --fix --ext .jsx ."
+    "fix": "prettier --write . && eslint --fix --ext .jsx .",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "aos": "^2.3.4",
@@ -37,6 +40,7 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
+    "gh-pages": "^5.0.0",
     "husky": "^8.0.3",
     "node-sass": "^8.0.0",
     "prettier": "^2.8.8",
